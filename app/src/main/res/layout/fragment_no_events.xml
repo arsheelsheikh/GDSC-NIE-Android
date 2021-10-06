@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/NELinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_dark_blue"
+        android:orientation="vertical"
+        tools:context=".presentation.main.home.events.NoEventsFragment">
+
+
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/text_grey_without_border"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="Umm, Nothing here yet!!\n How about our past events?"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:src="@drawable/astronaut_on_the_ocean" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/apercu_pro_regular"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="Discover more of GDSC"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView5"
+            style="@style/text_grey_without_border"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:layout_marginStart="0dp"
+            android:fontFamily="@font/apercu_pro_regular"
+            android:gravity="center"
+            android:text="Head to GDSC official website and browse through upcoming events from around the globe!!"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/neVisitGDSCWebsiteButton"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/google_color_yellow"
+            android:fontFamily="@font/apercu_pro_regular"
+            android:gravity="center"
+            android:text="visit"
+            android:textSize="14sp"
+            app:cornerRadius="20dp"
+            app:icon="@drawable/ic_baseline_code_24" />
+    </LinearLayout>
+</layout>

@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/techNewsBottomNavigation"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_insights_24"
+        android:title="Tech News"/>
+    <item
+        android:id="@+id/homeBottomNavigation"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home"/>
+    <item
+        android:id="@+id/blogBottomNavigation"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_collections_bookmark_24"
+        android:title="Blogs"/>
+    <item
+        android:id="@+id/contributeBottomNavigation"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_code_24"
+        android:title="Contribute"/>
+    <item
+        android:id="@+id/connectBottomNavigation"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_connect_without_contact_24"
+        android:title="Connect"/>
+</menu>
