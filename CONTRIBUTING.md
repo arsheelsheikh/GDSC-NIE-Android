@@ -19,7 +19,7 @@ The app is written using Kotlin and Java, and levrages jetpack libraries, databi
   
 ## Installation
 
-Please refer to the [installation wiki page](https://github.com/DSCNIE/GDSC-NIE-Android/issues/wiki#installation) for full instructions.
+Please refer to the [installation wiki page](https://github.com/DSCNIE/GDSC-NIE-Android/wiki#installation) for full instructions.
 
 ## Contributing
 We welcome contributions from everyone, especially new contributors.
@@ -36,12 +36,12 @@ Please report security issues directly to dsc@nie.ac.in.
 
 ## License
 
-The Project code is released under the [MIT License](https://github.com/DSCNIE/GDSC-NIE-Android/LICENSE).
+The Project code is released under the [MIT License](https://github.com/DSCNIE/GDSC-NIE-Android/blob/main/LICENSE).
 
 ## Social Media
 [<img height="30" src="https://img.shields.io/badge/twitter-1DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white" />][twitter]
 [<img height="30" src="https://img.shields.io/badge/linkedin-0077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" />][LinkedIn]
-<img height="30" src = "https://img.shields.io/badge/gdscnie%20youtube-FF0000.svg?&style=for-the-badge&logo=youtube&logoColor=white"/>
+[<img height="30" src = "https://img.shields.io/badge/gdscnie%20youtube-FF0000.svg?&style=for-the-badge&logo=youtube&logoColor=white"/>][dscnie-youtube]
 
 [twitter]: https://twitter.com/DscNie
 [linkedIn]: https://www.linkedin.com/company/dsc-nie/about/
