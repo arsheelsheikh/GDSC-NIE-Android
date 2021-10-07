@@ -19,7 +19,7 @@ The app is written using Kotlin and Java, and levrages jetpack libraries, databi
   
 ## Installation
 
-Please refer to the [installation wiki page](https://github.com/DSCNIE/GDSC-NIE-Android/wiki#installation) for full instructions.
+Please refer to the [installation wiki page](https://github.com/DSCNIE/GDSC-NIE-Android/wiki/Installation.md) for full instructions.
 
 ## Contributing
 We welcome contributions from everyone, especially new contributors.
