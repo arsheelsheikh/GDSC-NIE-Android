@@ -1,6 +1,5 @@
 package com.adityagupta.gdsc_nie.data.repository
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import com.adityagupta.gdsc_nie.data.remote.PastEventsData.FirebaseCallback
 import com.adityagupta.gdsc_nie.data.remote.PastEventsData.RecyclerData
@@ -9,8 +8,6 @@ import com.adityagupta.gdsc_nie.domain.repository.PastEventsRepository
 import com.google.firebase.database.*
 import kotlinx.coroutines.tasks.await
 
-import com.google.firebase.database.ktx.database
-import com.google.firebase.ktx.Firebase
 import javax.inject.Inject
 
 class PastEventsFragmentRepositoryImpl @Inject constructor(
