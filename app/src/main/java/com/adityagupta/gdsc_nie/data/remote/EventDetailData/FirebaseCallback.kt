@@ -1,4 +1,4 @@
-package com.adityagupta.gdsc_nie.data.remote.FeaturedData
+package com.adityagupta.gdsc_nie.data.remote.EventDetailData
 
 
 interface FirebaseCallback {

@@ -28,4 +28,9 @@
         <item name="android:textColor">#BCBCBC</item>
         <item name="android:textSize">12sp</item>
     </style>
+
+    <style name="circleImageView" parent="Theme.MaterialComponents.Light">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
 </resources>

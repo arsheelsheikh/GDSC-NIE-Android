@@ -5,12 +5,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.adityagupta.gdsc_nie.R
 import com.adityagupta.gdsc_nie.data.remote.PastEventsData.RecyclerData
 import com.adityagupta.gdsc_nie.databinding.PastEventsRecyclerItemBinding
+import com.adityagupta.gdsc_nie.presentation.main.home.HomeFragmentDirections
 
 
 class PastEventsRecyclerAdapter: RecyclerView.Adapter<PastEventsRecyclerAdapter.MyViewHolder>()  {
@@ -53,7 +55,7 @@ class PastEventsRecyclerAdapter: RecyclerView.Adapter<PastEventsRecyclerAdapter.
             peEventTitleTextView.text = event.title
             peItemSpeakerTextView.text = event.speaker
             peItemEventImageView.setImageResource(getImageId(event.type!!))
-
+            peItemCardView.setOnClickListener (Navigation.createNavigateOnClickListener(HomeFragmentDirections.actionHomeFragmentToEventsDetailFragment2(event)))
         }
 
     }

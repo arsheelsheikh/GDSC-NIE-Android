@@ -1,7 +1,9 @@
 package com.adityagupta.gdsc_nie.dependency_injection
 
+import com.adityagupta.gdsc_nie.data.repository.EventDetailsRepositoryImpl
 import com.adityagupta.gdsc_nie.data.repository.HomeFragmentRepositoryImpl
 import com.adityagupta.gdsc_nie.data.repository.PastEventsFragmentRepositoryImpl
+import com.adityagupta.gdsc_nie.domain.repository.EventDetailsRepository
 import com.adityagupta.gdsc_nie.domain.repository.HomeFragmentRepository
 import com.adityagupta.gdsc_nie.domain.repository.PastEventsRepository
 import com.adityagupta.gdsc_nie.presentation.main.home.HomeFragment
@@ -27,6 +29,12 @@ object AppModule {
     @Singleton
     fun providesHomeFragmentRepository(): HomeFragmentRepository{
         return HomeFragmentRepositoryImpl(providesFirebaseDatabaseReference())
+    }
+
+    @Provides
+    @Singleton
+    fun providesEventDetailsFragmentRepository(): EventDetailsRepository{
+        return EventDetailsRepositoryImpl(providesFirebaseDatabaseReference())
     }
 
     @Provides
