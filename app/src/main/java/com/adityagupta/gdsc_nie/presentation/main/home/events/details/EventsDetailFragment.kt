@@ -1,5 +1,7 @@
 package com.adityagupta.gdsc_nie.presentation.main.home.events.details
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -32,11 +34,21 @@ class EventsDetailFragment : Fragment() {
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_events_detail, container, false)
 
-        adapter = SpeakersAdapter()
+        adapter = SpeakersAdapter(requireContext())
         binding.edfRecyclerView.adapter = adapter
         getResponseUsingCoroutines()
-
         return binding.root
+    }
+
+    private fun setKnowMoreButton(eventLink: String) {
+        binding.edKnowMoreButton.setOnClickListener {
+            startActivity(
+                Intent(
+                    Intent.ACTION_VIEW,
+                    Uri.parse(eventLink)
+                )
+            )
+        }
     }
 
     private fun getResponseUsingCoroutines() {
@@ -64,6 +76,7 @@ class EventsDetailFragment : Fragment() {
                     binding.edEventDetailsTextView.text = event.description
                     binding.edEventTitleTextView.text = args.event.title
                     binding.edEventTimingsTextView.text = args.event.duration
+                    setKnowMoreButton(eventLink = event.eventlink!!)
                     return 1
                 }
             }

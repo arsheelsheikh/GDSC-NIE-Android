@@ -1,5 +1,6 @@
 package com.adityagupta.gdsc_nie.domain.adapters
 
+import android.content.Context
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,8 +9,9 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.adityagupta.gdsc_nie.data.remote.EventDetailData.SpeakerData
 import com.adityagupta.gdsc_nie.databinding.EventsSpeakersBinding
+import com.bumptech.glide.Glide
 
-class SpeakersAdapter: RecyclerView.Adapter<SpeakersAdapter.MyViewHolder>()  {
+class SpeakersAdapter(val context: Context): RecyclerView.Adapter<SpeakersAdapter.MyViewHolder>()  {
 
     var speakersList = emptyList<SpeakerData>()
 
@@ -48,6 +50,9 @@ class SpeakersAdapter: RecyclerView.Adapter<SpeakersAdapter.MyViewHolder>()  {
             val speaker = speakers[position]
             speakerTitle.text = speaker.title
             Log.i("firebase", speaker.toString())
+            Glide.with(context)
+                .load(speaker.link)
+                .into(speakerImageView)
         }
 
     }

@@ -11,4 +11,5 @@ data class EventDetailsData (
     val speaker2title: String? = "",
     val speaker3link: String? = "",
     val speaker3title: String? = "",
+    val eventlink: String? = ""
 )

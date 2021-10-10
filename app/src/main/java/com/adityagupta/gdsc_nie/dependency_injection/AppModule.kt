@@ -7,6 +7,7 @@ import com.adityagupta.gdsc_nie.domain.repository.EventDetailsRepository
 import com.adityagupta.gdsc_nie.domain.repository.HomeFragmentRepository
 import com.adityagupta.gdsc_nie.domain.repository.PastEventsRepository
 import com.adityagupta.gdsc_nie.presentation.main.home.HomeFragment
+import com.bumptech.glide.annotation.GlideModule
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import dagger.Module
@@ -42,4 +43,6 @@ object AppModule {
     fun providesFirebaseDatabaseReference(): DatabaseReference{
         return FirebaseDatabase.getInstance().reference
     }
+
+
 }
