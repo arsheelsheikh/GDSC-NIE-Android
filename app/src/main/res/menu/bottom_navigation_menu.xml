@@ -15,13 +15,14 @@
         android:icon="@drawable/ic_baseline_collections_bookmark_24"
         android:title="Blogs"/>
     <item
-        android:id="@+id/contributeBottomNavigation"
-        android:enabled="true"
-        android:icon="@drawable/ic_baseline_code_24"
-        android:title="Contribute"/>
-    <item
         android:id="@+id/connectBottomNavigation"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_connect_without_contact_24"
         android:title="Connect"/>
+    <item
+        android:id="@+id/aboutBottomNavigation"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_info_24"
+        android:title="About"/>
+
 </menu>

@@ -29,6 +29,10 @@
         <item name="android:textSize">12sp</item>
     </style>
 
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
     <style name="circleImageView" parent="Theme.MaterialComponents.Light">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
