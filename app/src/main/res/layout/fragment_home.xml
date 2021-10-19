@@ -143,7 +143,7 @@
                         android:text="Past Events" />
                 </com.google.android.material.tabs.TabLayout>
 
-                <androidx.viewpager.widget.ViewPager
+                <androidx.viewpager2.widget.ViewPager2
                     android:id="@+id/pager"
                     android:layout_width="match_parent"
                     android:layout_height="500dp"
@@ -152,7 +152,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tabLayout">
 
-                </androidx.viewpager.widget.ViewPager>
+                </androidx.viewpager2.widget.ViewPager2>
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

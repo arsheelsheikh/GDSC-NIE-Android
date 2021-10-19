@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
@@ -13,6 +14,11 @@ import com.adityagupta.gdsc_nie.R
 import com.adityagupta.gdsc_nie.data.remote.PastEventsData.RecyclerData
 import com.adityagupta.gdsc_nie.databinding.PastEventsRecyclerItemBinding
 import com.adityagupta.gdsc_nie.presentation.main.home.HomeFragmentDirections
+import androidx.core.content.ContextCompat.startActivity
+
+import android.content.Intent
+import androidx.core.content.ContextCompat
+import com.adityagupta.gdsc_nie.presentation.main.home.events.details.EventDetailsActivity
 
 
 class PastEventsRecyclerAdapter: RecyclerView.Adapter<PastEventsRecyclerAdapter.MyViewHolder>()  {
@@ -21,7 +27,6 @@ class PastEventsRecyclerAdapter: RecyclerView.Adapter<PastEventsRecyclerAdapter.
 
 
     inner class MyViewHolder(val binding: PastEventsRecyclerItemBinding): RecyclerView.ViewHolder(binding.root){
-
     }
 
     private val diffCallback = object : DiffUtil.ItemCallback<RecyclerData>(){
@@ -55,7 +60,16 @@ class PastEventsRecyclerAdapter: RecyclerView.Adapter<PastEventsRecyclerAdapter.
             peEventTitleTextView.text = event.title
             peItemSpeakerTextView.text = event.speaker
             peItemEventImageView.setImageResource(getImageId(event.type!!))
-            peItemCardView.setOnClickListener (Navigation.createNavigateOnClickListener(HomeFragmentDirections.actionHomeFragmentToEventsDetailFragment2(event)))
+            /*peItemCardView.setOnClickListener{ it ->
+                peItemCardView
+                    .findNavController()
+                    .navigate(HomeFragmentDirections.actionHomeFragmentToEventsDetailFragment(event))
+            }*/
+            peItemCardView.setOnClickListener {
+                val i = Intent(peItemCardView.context, EventDetailsActivity::class.java)
+                i.putExtra("event", event)
+                peItemCardView.context.startActivity(i)
+            }
         }
 
     }
