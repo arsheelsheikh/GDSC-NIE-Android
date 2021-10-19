@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../../layout/custom_preview.xml" value="0.19791666666666666" />
         <entry key="..\:/Users/rocko/AndroidStudioProjects/GDSCNIE/app/src/main/res/drawable/bottom_navigation_selector.xml" value="0.1574074074074074" />
         <entry key="..\:/Users/rocko/AndroidStudioProjects/GDSCNIE/app/src/main/res/drawable/frame.xml" value="0.20833333333333334" />
         <entry key="..\:/Users/rocko/AndroidStudioProjects/GDSCNIE/app/src/main/res/drawable/ic_baseline_perm_identity_24.xml" value="0.3509259259259259" />
@@ -19,12 +20,16 @@
         <entry key="..\:/Users/rocko/AndroidStudioProjects/GDSCNIE/app/src/main/res/menu/main_app_bar.xml" value="0.3494791666666667" />
         <entry key="..\:/Users/rocko/Documents/GDSC-NIE/GDSC-NIE-Android/app/src/main/res/layout/fragment_connect.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/rocko/Documents/GDSC-NIE/GDSC-NIE-Android/app/src/main/res/layout/fragment_events_detail.xml" value="0.16197916666666667" />
+        <entry key="app/src/main/res/drawable/rounded.xml" value="0.21085526315789474" />
         <entry key="app/src/main/res/layout/activity_event_details.xml" value="0.13854166666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.15368852459016394" />
         <entry key="app/src/main/res/layout/fragment_connect.xml" value="0.2341485507246377" />
+        <entry key="app/src/main/res/layout/fragment_connect_bottom_sheet.xml" value="0.15368852459016394" />
         <entry key="app/src/main/res/layout/fragment_events_detail.xml" value="0.15677083333333333" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.2341485507246377" />
         <entry key="app/src/main/res/layout/fragment_no_events.xml" value="0.16145833333333334" />
+        <entry key="app/src/main/res/layout/fragment_past_events.xml" value="0.16188524590163936" />
+        <entry key="app/src/main/res/layout/team_member_item.xml" value="0.264" />
         <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.31354166666666666" />
         <entry key="app/src/main/res/menu/main_app_bar.xml" value="0.16145833333333334" />
       </map>

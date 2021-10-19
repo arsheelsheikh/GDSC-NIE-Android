@@ -9,6 +9,7 @@ import com.adityagupta.gdsc_nie.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 import com.adityagupta.gdsc_nie.presentation.main.home.HomeFragment
 import com.adityagupta.gdsc_nie.presentation.main.home.about.AboutFragment
+import com.adityagupta.gdsc_nie.presentation.main.home.connect.ConnectFragment
 
 
 @AndroidEntryPoint
@@ -16,8 +17,10 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
     private val homeFragment: Fragment = HomeFragment()
-    val aboutFragment: Fragment = AboutFragment()
-    val fm: FragmentManager = supportFragmentManager
+    private val aboutFragment: Fragment = AboutFragment()
+    private val connectFragment: Fragment = ConnectFragment()
+
+    private val fm: FragmentManager = supportFragmentManager
     var active: Fragment = homeFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         fm.beginTransaction().add(R.id.homeActivityFragmentContainerView, aboutFragment, "2").hide(aboutFragment).commit();
+        fm.beginTransaction().add(R.id.homeActivityFragmentContainerView, connectFragment, "3").hide(connectFragment).commit();
         fm.beginTransaction().add(R.id.homeActivityFragmentContainerView, homeFragment, "1").commit();
 
         binding.bottomNavigation.setOnNavigationItemSelectedListener { item ->
@@ -38,6 +42,11 @@ class MainActivity : AppCompatActivity() {
                 R.id.aboutBottomNavigation -> {
                     fm.beginTransaction().hide(active).show(aboutFragment).commit();
                     active = aboutFragment;
+                    true
+                }
+                R.id.connectBottomNavigation -> {
+                    fm.beginTransaction().hide(active).show(connectFragment).commit();
+                    active = connectFragment;
                     true
                 }
                 else -> false

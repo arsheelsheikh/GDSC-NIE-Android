@@ -9,11 +9,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.adityagupta.gdsc_nie.R
+import com.adityagupta.gdsc_nie.databinding.FragmentAboutBinding
 import com.adityagupta.gdsc_nie.databinding.FragmentConnectBinding
 
 class AboutFragment : Fragment() {
 
-    lateinit var binding: FragmentConnectBinding
+    lateinit var binding: FragmentAboutBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -21,7 +22,7 @@ class AboutFragment : Fragment() {
     ): View? {
         binding = DataBindingUtil.inflate(
             layoutInflater,
-            R.layout.fragment_connect,
+            R.layout.fragment_about,
             container,
             false
         )
