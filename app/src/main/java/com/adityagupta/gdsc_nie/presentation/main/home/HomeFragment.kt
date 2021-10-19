@@ -36,11 +36,7 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
 
-/*
-        setUpViewPager()
-*/
         getResponseUsingCoroutines()
-
 
         return binding.root
     }
@@ -60,17 +56,6 @@ class HomeFragment : Fragment() {
 
     }
 
-
-
-    /*private fun setUpViewPager() {
-        Log.i("info", "set up viewpager triggered")
-        var adapter = EventsPagerAdapter(parentFragmentManager)
-
-        adapter.addFragment(NoEventsFragment(), "Upcoming")
-        adapter.addFragment(PastEventsFragment(), "Past Events")
-
-        binding.pager.adapter = adapter
-    }*/
 
     private fun getResponseUsingCoroutines() {
         viewModel.responseLiveData.observe(viewLifecycleOwner, {

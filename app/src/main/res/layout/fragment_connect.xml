@@ -48,52 +48,56 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:id="@+id/imageView3"
+                    android:id="@+id/cfInstagramButton"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_margin="8dp"
-                    android:src="@drawable/instagram"
+                    android:padding="10dp"
+                    android:src="@drawable/instagramlogoround"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/imageView4"
+                    app:layout_constraintEnd_toStartOf="@+id/cfTwitterbutton"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
-                    android:id="@+id/imageView4"
+                    android:id="@+id/cfTwitterbutton"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginStart="8dp"
                     android:foregroundTintMode="multiply"
-                    android:src="@drawable/twitter"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/twitterlogoround"
                     android:tintMode="multiply"
-                    app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-                    app:layout_constraintEnd_toStartOf="@+id/imageView6"
+                    app:layout_constraintBottom_toBottomOf="@+id/cfInstagramButton"
+                    app:layout_constraintEnd_toStartOf="@+id/cfLinkedinButton"
                     app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/imageView3"
-                    app:layout_constraintTop_toTopOf="@+id/imageView3" />
+                    app:layout_constraintStart_toEndOf="@+id/cfInstagramButton"
+                    app:layout_constraintTop_toTopOf="@+id/cfInstagramButton" />
 
                 <ImageView
-                    android:id="@+id/imageView6"
+                    android:id="@+id/cfLinkedinButton"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginStart="8dp"
-                    android:src="@drawable/linkedin"
-                    app:layout_constraintEnd_toStartOf="@+id/imageView7"
+                    android:src="@drawable/linkedinlogoround"
+                    app:layout_constraintEnd_toStartOf="@+id/cfDiscordButton"
                     app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/imageView4"
-                    app:layout_constraintTop_toTopOf="@+id/imageView4" />
+                    app:layout_constraintStart_toEndOf="@+id/cfTwitterbutton"
+                    app:layout_constraintTop_toTopOf="@+id/cfTwitterbutton" />
 
                 <ImageView
-                    android:id="@+id/imageView7"
+                    android:id="@+id/cfDiscordButton"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginStart="8dp"
-                    android:src="@drawable/discord"
+                    android:padding="10dp"
+                    android:src="@drawable/discordlogoround"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/imageView6"
-                    app:layout_constraintTop_toTopOf="@+id/imageView6" />
+                    app:layout_constraintStart_toEndOf="@+id/cfLinkedinButton"
+                    app:layout_constraintTop_toTopOf="@+id/cfLinkedinButton" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
@@ -147,10 +151,11 @@
                         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
                     <com.google.android.material.button.MaterialButton
+                        android:id="@+id/cfJoinDiscordButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="32dp"
                         android:layout_marginBottom="16dp"
+                        android:layout_marginTop="32dp"
                         android:text="DISCORD"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="@+id/textView8"
@@ -208,12 +213,11 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
-                        android:background="#FFFFFF"
                         android:hint="email address"
-                        app:boxStrokeColor="#000000"
+                        app:boxBackgroundColor="#F5F5F5"
                         app:boxStrokeWidth="2dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -236,8 +240,30 @@
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="@+id/outlinedTextField"
                         app:layout_constraintTop_toBottomOf="@+id/outlinedTextField" />
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button2"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:fontFamily="@font/apercu_pro_regular"
+                android:text="Visit our official website"
+                android:textColor="@color/white"
+                app:strokeColor="@color/google_color_blue" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="0dp"
+                app:srcCompat="@drawable/gdsclogo" />
 
 
         </LinearLayout>
