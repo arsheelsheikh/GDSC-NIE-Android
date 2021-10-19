@@ -6,12 +6,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.adityagupta.gdsc_nie.databinding.ActivityMainBinding
-import com.adityagupta.gdsc_nie.domain.adapters.HomePagerAdapter
-import com.adityagupta.gdsc_nie.presentation.main.home.events.NoEventsFragment
-import com.adityagupta.gdsc_nie.presentation.main.home.events.pastEvents.PastEventsFragment
 import dagger.hilt.android.AndroidEntryPoint
 import com.adityagupta.gdsc_nie.presentation.main.home.HomeFragment
-import com.adityagupta.gdsc_nie.presentation.main.home.connect.ConnectFragment
+import com.adityagupta.gdsc_nie.presentation.main.home.about.AboutFragment
 
 
 @AndroidEntryPoint
@@ -19,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
     private val homeFragment: Fragment = HomeFragment()
-    val connectFragment: Fragment = ConnectFragment()
+    val aboutFragment: Fragment = AboutFragment()
     val fm: FragmentManager = supportFragmentManager
     var active: Fragment = homeFragment
 
@@ -27,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        fm.beginTransaction().add(R.id.homeActivityFragmentContainerView, connectFragment, "2").hide(connectFragment).commit();
+        fm.beginTransaction().add(R.id.homeActivityFragmentContainerView, aboutFragment, "2").hide(aboutFragment).commit();
         fm.beginTransaction().add(R.id.homeActivityFragmentContainerView, homeFragment, "1").commit();
 
         binding.bottomNavigation.setOnNavigationItemSelectedListener { item ->
@@ -38,9 +35,9 @@ class MainActivity : AppCompatActivity() {
                     true
 
                 }
-                R.id.connectBottomNavigation -> {
-                    fm.beginTransaction().hide(active).show(connectFragment).commit();
-                    active = connectFragment;
+                R.id.aboutBottomNavigation -> {
+                    fm.beginTransaction().hide(active).show(aboutFragment).commit();
+                    active = aboutFragment;
                     true
                 }
                 else -> false

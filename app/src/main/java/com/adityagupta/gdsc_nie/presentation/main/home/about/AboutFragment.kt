@@ -1,4 +1,4 @@
-package com.adityagupta.gdsc_nie.presentation.main.home.connect
+package com.adityagupta.gdsc_nie.presentation.main.home.about
 
 import android.content.Intent
 import android.net.Uri
@@ -11,7 +11,7 @@ import androidx.databinding.DataBindingUtil
 import com.adityagupta.gdsc_nie.R
 import com.adityagupta.gdsc_nie.databinding.FragmentConnectBinding
 
-class ConnectFragment : Fragment() {
+class AboutFragment : Fragment() {
 
     lateinit var binding: FragmentConnectBinding
 
