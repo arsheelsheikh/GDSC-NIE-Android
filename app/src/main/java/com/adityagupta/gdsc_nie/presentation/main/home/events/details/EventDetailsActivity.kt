@@ -1,60 +1,51 @@
 package com.adityagupta.gdsc_nie.presentation.main.home.events.details
 
-import android.content.Intent
-import android.net.Uri
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import androidx.activity.viewModels
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.navArgs
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import com.adityagupta.gdsc_nie.R
 import com.adityagupta.gdsc_nie.data.remote.EventDetailData.Response
 import com.adityagupta.gdsc_nie.data.remote.EventDetailData.SpeakerData
+import com.adityagupta.gdsc_nie.databinding.ActivityEventDetailsBinding
 import com.adityagupta.gdsc_nie.databinding.FragmentEventsDetailBinding
 import com.adityagupta.gdsc_nie.domain.adapters.SpeakersAdapter
 import dagger.hilt.android.AndroidEntryPoint
+import android.content.Intent
+import android.net.Uri
+import com.adityagupta.gdsc_nie.data.remote.PastEventsData.RecyclerData
+
 
 @AndroidEntryPoint
-class EventsDetailFragment : Fragment() {
+class EventDetailsActivity : AppCompatActivity() {
 
-    lateinit var binding: FragmentEventsDetailBinding
+    lateinit var binding: ActivityEventDetailsBinding
     lateinit var adapter: SpeakersAdapter
     private val viewModel by viewModels<EventDetailsViewModel>()
-    val args: EventsDetailFragmentArgs by navArgs()
+    lateinit var eventArg: RecyclerData
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_events_detail, container, false)
-
-        adapter = SpeakersAdapter(requireContext())
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_event_details)
+        adapter = SpeakersAdapter(this)
         binding.edfRecyclerView.adapter = adapter
-        return binding.root
-    }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+        val intent = this.intent
+        eventArg = intent.extras?.get("event") as RecyclerData
         getResponseUsingCoroutines()
-    }
 
-    private fun setKnowMoreButton(eventLink: String) {
-        binding.edKnowMoreButton.setOnClickListener {
-            startActivity(
-                Intent(
-                    Intent.ACTION_VIEW,
-                    Uri.parse(eventLink)
-                )
-            )
-        }
     }
 
     private fun getResponseUsingCoroutines() {
-        viewModel.responseLiveData.observe(viewLifecycleOwner, {
+        viewModel.responseLiveData.observe(this,  {
             setRecyclerWithFirebaseData(it)
         })
     }
@@ -69,15 +60,15 @@ class EventsDetailFragment : Fragment() {
             events.forEach { event ->
                 binding.edProgressBar.visibility = View.INVISIBLE
                 binding.edMainCardView.visibility = View.VISIBLE
-                if(event.id == args.event.id){
+                if(event.id == eventArg.id){
                     val speaker1 = SpeakerData(event.speaker1link, event.speaker1title)
                     val speaker2 = SpeakerData(event.speaker2link, event.speaker2title)
                     val speaker3 = SpeakerData(event.speaker3link, event.speaker3title)
                     val list = listOf<SpeakerData>(speaker1, speaker2, speaker3)
                     adapter.speakers = list
                     binding.edEventDetailsTextView.text = event.description
-                    binding.edEventTitleTextView.text = args.event.title
-                    binding.edEventTimingsTextView.text = args.event.duration
+                    binding.edEventTitleTextView.text = eventArg.title
+                    binding.edEventTimingsTextView.text = eventArg.duration
                     setKnowMoreButton(eventLink = event.eventlink!!)
                     return 1
                 }
@@ -92,4 +83,14 @@ class EventsDetailFragment : Fragment() {
         return 1
     }
 
+    private fun setKnowMoreButton(eventLink: String) {
+        binding.edKnowMoreButton.setOnClickListener {
+            startActivity(
+                Intent(
+                    Intent.ACTION_VIEW,
+                    Uri.parse(eventLink)
+                )
+            )
+        }
+    }
 }

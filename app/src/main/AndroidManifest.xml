@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.adityagupta.gdsc_nie">
-
     <!-- PERMISSIONS -->
-    <uses-permission android:name="android.permission.INTERNET"/>
-
     <application
         android:name=".GDSCApplication"
         android:allowBackup="true"
@@ -13,6 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GDSCNIE">
+        <activity
+            android:name=".presentation.main.home.events.details.EventDetailsActivity"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -23,5 +23,7 @@
             </intent-filter>
         </activity>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
