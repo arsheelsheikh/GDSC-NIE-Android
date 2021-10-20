@@ -25,6 +25,7 @@
         <entry key="app/src/main/res/drawable/splash_image.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_event_details.xml" value="0.13854166666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.15368852459016394" />
+        <entry key="app/src/main/res/layout/fragment_blogs.xml" value="0.10328947368421053" />
         <entry key="app/src/main/res/layout/fragment_connect.xml" value="0.2341485507246377" />
         <entry key="app/src/main/res/layout/fragment_connect_bottom_sheet.xml" value="0.15368852459016394" />
         <entry key="app/src/main/res/layout/fragment_events_detail.xml" value="0.15677083333333333" />
