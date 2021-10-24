@@ -17,6 +17,8 @@ import com.google.firebase.database.*
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import dagger.hilt.android.AndroidEntryPoint
+import java.text.SimpleDateFormat
+import java.util.*
 
 @AndroidEntryPoint
 class PastEventsFragment(
@@ -55,7 +57,23 @@ class PastEventsFragment(
 
     private fun setRecyclerWithFirebaseData(response: Response) {
         response.pastEvents?.let { events ->
-            recyclerAdapter.events = events
+
+            var calendar = Calendar.getInstance()
+            var simpleDateFormat = SimpleDateFormat("yyyy-MM-dd")
+            var dateTime = simpleDateFormat.format(calendar.time)
+            var dateCurrent = SimpleDateFormat("yyyy-MM-dd").parse(dateTime)
+            var eventssssssss = mutableListOf<RecyclerData>()
+            events.forEach {
+                val date = SimpleDateFormat("yyyy-MM-dd").parse(it.expiry)
+
+                if(date < dateCurrent){
+                    eventssssssss.add(it)
+                }
+
+            }
+
+            Log.i("date", dateTime.toString())
+            recyclerAdapter.events = eventssssssss
             binding.peProgressBar.visibility = View.GONE
         }
 
