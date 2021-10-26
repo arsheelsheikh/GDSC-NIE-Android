@@ -74,7 +74,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
-                app:srcCompat="@drawable/aditya"
+                app:srcCompat="@drawable/aditya_gupta"
                 app:strokeColor="@color/google_color_green"
                 app:strokeWidth="3dp" />
 
