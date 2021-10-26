@@ -48,6 +48,7 @@ class TeamMemberAdapter: RecyclerView.Adapter<TeamMemberAdapter.MyViewHolder>() 
             var member = members[position]
             tmiName.text = member.name
             tmiPosition.text = member.position
+            shapeableImageView.setImageResource(member.imageId)
         }
 
     }

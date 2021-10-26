@@ -24,7 +24,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:shapeAppearanceOverlay="@style/circleImageView"
-            app:srcCompat="@drawable/aditya" />
+            app:srcCompat="@drawable/aditya_gupta" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"

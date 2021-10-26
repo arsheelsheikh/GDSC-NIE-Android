@@ -10,5 +10,6 @@ data class RecyclerData (
     val speaker: String? = "",
     val title: String? = "",
     val link: String? = "",
-    val duration: String? = ""
+    val duration: String? = "",
+    val expiry: String? = ""
         ): Parcelable

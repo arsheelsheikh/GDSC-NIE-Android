@@ -9,6 +9,7 @@ import com.adityagupta.gdsc_nie.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 import com.adityagupta.gdsc_nie.presentation.main.home.HomeFragment
 import com.adityagupta.gdsc_nie.presentation.main.home.about.AboutFragment
+import com.adityagupta.gdsc_nie.presentation.main.home.blogs.BlogsFragment
 import com.adityagupta.gdsc_nie.presentation.main.home.connect.ConnectFragment
 
 
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     private val homeFragment: Fragment = HomeFragment()
     private val aboutFragment: Fragment = AboutFragment()
     private val connectFragment: Fragment = ConnectFragment()
+    private val blogsFragment: Fragment = BlogsFragment()
 
     private val fm: FragmentManager = supportFragmentManager
     var active: Fragment = homeFragment
@@ -27,8 +29,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
+
+
         fm.beginTransaction().add(R.id.homeActivityFragmentContainerView, aboutFragment, "2").hide(aboutFragment).commit();
         fm.beginTransaction().add(R.id.homeActivityFragmentContainerView, connectFragment, "3").hide(connectFragment).commit();
+        fm.beginTransaction().add(R.id.homeActivityFragmentContainerView, blogsFragment, "4").hide(blogsFragment).commit();
         fm.beginTransaction().add(R.id.homeActivityFragmentContainerView, homeFragment, "1").commit();
 
         binding.bottomNavigation.setOnNavigationItemSelectedListener { item ->
@@ -47,6 +52,11 @@ class MainActivity : AppCompatActivity() {
                 R.id.connectBottomNavigation -> {
                     fm.beginTransaction().hide(active).show(connectFragment).commit();
                     active = connectFragment;
+                    true
+                }
+                R.id.blogBottomNavigation -> {
+                    fm.beginTransaction().hide(active).show(blogsFragment).commit();
+                    active = blogsFragment;
                     true
                 }
                 else -> false

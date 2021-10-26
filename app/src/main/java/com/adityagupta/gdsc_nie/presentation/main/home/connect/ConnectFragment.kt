@@ -1,6 +1,7 @@
 package com.adityagupta.gdsc_nie.presentation.main.home.connect
 
 import android.os.Bundle
+import android.transition.TransitionInflater
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -29,18 +30,24 @@ class ConnectFragment : Fragment() {
             container,
             false
         )
+
+
+
         binding.cfRecyclerView.adapter = recyclerAdapter
 
         var members = listOf<TeamMemberInfo>(
-            TeamMemberInfo("Aditya Gupta", "Technical Lead", "https://www.github.com/aadityagupta", "https://www.instagram.com/adi.tya_._"),
-            TeamMemberInfo("Iresh Sharma", "GDSC NIE Lead", "https://www.github.com/aadityagupta", "https://www.instagram.com/adi.tya_._"),
-            TeamMemberInfo("Dharithri Dhatoo", "Management Lead", "https://www.github.com/aadityagupta", "https://www.instagram.com/adi.tya_._"),
-            TeamMemberInfo("Raghav Kaushal", "CP Lead", "https://www.github.com/aadityagupta", "https://www.instagram.com/adi.tya_._"),
-            TeamMemberInfo("Pranav B", "Technical Advisor", "https://www.github.com/aadityagupta", "https://www.instagram.com/adi.tya_._"),
-            TeamMemberInfo("Apala S", "Marketing Lead", "https://www.github.com/aadityagupta", "https://www.instagram.com/adi.tya_._"),
-            TeamMemberInfo("Yash Chauhan", "CP Lead", "https://www.github.com/aadityagupta", "https://www.instagram.com/adi.tya_._")
+            TeamMemberInfo("Aditya Gupta",R.drawable.aditya_gupta, "Technical Lead", "https://www.github.com/aadityagupta", "https://www.instagram.com/adi.tya_._"),
+            TeamMemberInfo("Iresh Sharma", R.drawable.iresh_sharma, "GDSC NIE Lead", "https://www.github.com/aadityagupta", "https://www.instagram.com/adi.tya_._"),
+            TeamMemberInfo("Deepthi Nanjunda", R.drawable.deepthi_n, "Editorial Lead", "https://www.github.com/aadityagupta", "https://www.instagram.com/adi.tya_._"),
+            TeamMemberInfo("Raghav Kaushal", R.drawable.raghav_k,"CP Lead", "https://www.github.com/aadityagupta", "https://www.instagram.com/adi.tya_._"),
+            TeamMemberInfo("Pranav B",R.drawable.pranav_b, "Technical Advisor", "https://www.github.com/aadityagupta", "https://www.instagram.com/adi.tya_._"),
+            TeamMemberInfo("Apala S",R.drawable.apala_s, "Marketing Lead", "https://www.github.com/aadityagupta", "https://www.instagram.com/adi.tya_._"),
+            TeamMemberInfo("Yash Chauhan", R.drawable.yash_chauhan,"CP Lead", "https://www.github.com/aadityagupta", "https://www.instagram.com/adi.tya_._")
 
         )
+        members = members.sortedBy {
+            it.name
+        }
 
         recyclerAdapter.members = members
 

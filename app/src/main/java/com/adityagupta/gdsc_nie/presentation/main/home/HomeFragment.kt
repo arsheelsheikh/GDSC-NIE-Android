@@ -13,9 +13,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.adityagupta.gdsc_nie.R
 import com.adityagupta.gdsc_nie.data.remote.FeaturedData.Response
 import com.adityagupta.gdsc_nie.databinding.FragmentHomeBinding
-import com.adityagupta.gdsc_nie.domain.adapters.EventsPagerAdapter
-import com.adityagupta.gdsc_nie.presentation.main.home.events.NoEventsFragment
-import com.adityagupta.gdsc_nie.presentation.main.home.events.UpcomingEventsFragment
+import com.adityagupta.gdsc_nie.presentation.main.home.events.upcomingEvents.UpcomingEventsFragment
 import com.adityagupta.gdsc_nie.presentation.main.home.events.pastEvents.PastEventsFragment
 import com.google.android.material.tabs.TabLayoutMediator
 import dagger.hilt.android.AndroidEntryPoint
@@ -85,9 +83,9 @@ class HomeFragment : Fragment() {
         override fun createFragment(position: Int): Fragment {
             // Return a NEW fragment instance in createFragment(int)
             return when(position){
-                0 -> NoEventsFragment()
+                0 -> UpcomingEventsFragment()
                 1 -> PastEventsFragment()
-                else -> NoEventsFragment()
+                else -> UpcomingEventsFragment()
             }
         }
     }

@@ -40,8 +40,16 @@ class EventDetailsActivity : AppCompatActivity() {
 
         val intent = this.intent
         eventArg = intent.extras?.get("event") as RecyclerData
+
+        setImage()
         getResponseUsingCoroutines()
 
+    }
+
+    private fun setImage() {
+        var imageType = eventArg.type
+
+        binding.edEventTypeImageView.setImageResource(getImageId(imageType!!))
     }
 
     private fun getResponseUsingCoroutines() {
@@ -91,6 +99,17 @@ class EventDetailsActivity : AppCompatActivity() {
                     Uri.parse(eventLink)
                 )
             )
+        }
+    }
+
+    private fun getImageId(eventType: String): Int {
+        return when(eventType){
+            "Android" -> R.drawable.androidlogo
+            "Flutter" -> R.drawable.flutterlogo
+            "Cloud" -> R.drawable.cloudlogo
+            "Tensorflow" -> R.drawable.tensorflowlogo
+            "Firebase" -> R.drawable.firebaselogo
+            else -> -1
         }
     }
 }
