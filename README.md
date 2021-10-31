@@ -1,4 +1,4 @@
-# Hacktoberfest 2021 - GDSC NIE
+<h1 align="center">Hacktoberfest 2021 - GDSC NIE</h1>
 
 <p align="center">
 <a href="https://github.com/DSCNIE/GDSC-NIE-Android"><img src="https://img.shields.io/badge/Open%20Source-%F0%9F%A4%8D-Green"></a>
