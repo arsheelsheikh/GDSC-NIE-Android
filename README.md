@@ -1,4 +1,21 @@
-# Hacktoberfest 2021 - GDSC NIE
+<h1 align="center">Hacktoberfest 2021 - GDSC NIE</h1>
+
+<p align="center">
+<a href="https://github.com/DSCNIE/GDSC-NIE-Android"><img src="https://img.shields.io/badge/Open%20Source-%F0%9F%A4%8D-Green"></a>
+<a href="https://github.com/DSCNIE/GDSC-NIE-Android"><img src="https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=yellow"></a>
+<a href="https://github.com/DSCNIE/GDSC-NIE-Android"><img src="https://img.shields.io/badge/maintenance-yes-brightgreen"></a>
+</p>
+
+     
+<p align="center">
+<a href="https://github.com/DSCNIE/GDSC-NIE-Android"><img src="https://img.shields.io/github/stars/DSCNIE/GDSC-NIE-Android?color=0059b3"></a>
+<a href="https://github.com/DSCNIE/GDSC-NIE-Android/network/members"><img src="https://img.shields.io/github/forks/DSCNIE/GDSC-NIE-Android?color=yellow"></a>
+<a href="https://github.com/DSCNIE/GDSC-NIE-Android/graphs/contributors"><img src="https://img.shields.io/github/contributors/DSCNIE/GDSC-NIE-Android?color=brightgreen"></a>
+<a href="https://github.com/DSCNIE/GDSC-NIE-Android/issues"><img src="https://img.shields.io/github/issues/DSCNIE/GDSC-NIE-Android?color=0059b3"></a>
+<a href="https://github.com/DSCNIE/GDSC-NIE-Android/issues?q=is%3Aissue+is%3Aclosed"><img src="https://img.shields.io/github/issues-closed-raw/DSCNIE/GDSC-NIE-Android?color=yellow"></a>
+<a href="https://github.com/ghulamyazdani/TruHealth/pulls"><img src="https://img.shields.io/github/issues-pr/DSCNIE/GDSC-NIE-Android?color=brightgreen"></a>
+<a href="https://github.com/DSCNIE/GDSC-NIE-Android/issues?q=is%3Apr+is%3Aclosed"><img src="https://img.shields.io/github/issues-pr-closed-raw/DSCNIE/GDSC-NIE-Android?color=0059b3"></a>
+</p>
 
 ## Hello NIE <img src="https://raw.githubusercontent.com/arnoob16/arnoob16/master/wave.gif" width="30px">
 
